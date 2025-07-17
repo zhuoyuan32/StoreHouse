@@ -797,10 +797,10 @@ install_singbox_config() {
                 log_warn "官方核心需要订阅链接来自动生成配置，现已跳过。"
             fi
             ;;
-        puer)   template_url="https://raw.githubusercontent.com/herozmy/StoreHouse/refs/heads/latest/config/sing-box/sing-box-p.json" ;;
-        xiling) template_url="https://raw.githubusercontent.com/herozmy/StoreHouse/refs/heads/latest/config/sing-box/sing-box-x.json" ;;
-        s-y)    template_url="https://raw.githubusercontent.com/herozmy/StoreHouse/refs/heads/latest/config/sing-box/sing-box-y.json" ;;
-        reF1nd) template_url="https://raw.githubusercontent.com/herozmy/StoreHouse/refs/heads/latest/config/sing-box/sing-box-r-1.12.json" ;;
+        puer)   template_url="https://raw.githubusercontent.com/zhuoyuan32/StoreHouse/refs/heads/latest/config/sing-box/sing-box-p.json" ;;
+        xiling) template_url="https://raw.githubusercontent.com/zhuoyuan32/StoreHouse/refs/heads/latest/config/sing-box/sing-box-x.json" ;;
+        s-y)    template_url="https://raw.githubusercontent.com/zhuoyuan32/StoreHouse/refs/heads/latest/config/sing-box/sing-box-y.json" ;;
+        reF1nd) template_url="https://raw.githubusercontent.com/zhuoyuan32/StoreHouse/refs/heads/latest/config/sing-box/sing-box-r-1.12.json" ;;
     esac
 
     # 如果设置了模板URL，则下载并替换订阅地址
