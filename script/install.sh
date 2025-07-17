@@ -20,7 +20,7 @@ green() { echo -e "\e[32m$1\e[0m"; }
 yellow() { echo -e "\e[33m$1\e[0m"; }
 
 # 变量定义
-url="https://raw.githubusercontent.com/herozmy/StoreHouse/latest"
+url="https://raw.githubusercontent.com/zhuoyuan32/StoreHouse/latest"
 
 download() {
     # 参数【$1】目标文件，【$2】在线地址
