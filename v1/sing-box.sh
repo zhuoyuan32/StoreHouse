@@ -566,7 +566,7 @@ install_mihomo_config(){
             mkdir -p /etc/sing-box
             echo "reF1nd" > /etc/sing-box/version
             get_subscription_url
-            if curl -o /etc/sing-box/config.json https://raw.githubusercontent.com/herozmy/StoreHouse/refs/heads/latest/config/sing-box/sing-box-r-1.12.json; then
+            if curl -o /etc/sing-box/config.json https://raw.githubusercontent.com/zhuoyuan32/StoreHouse/refs/heads/latest/config/sing-box/sing-box-r-1.12.json; then
                 echo -e "${green_text} 配置文件下载成功${reset}"
                 sed -i "s|\"download_url\": \"机场订阅\"|\"download_url\": \"$suburl\"|g" /etc/sing-box/config.json
             else
