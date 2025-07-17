@@ -646,7 +646,7 @@ install_singbox_core() {
         puer)   url="https://github.com/herozmy/StoreHouse/releases/download/sing-box/sing-box-puernya-linux-${arch}.tar.gz" ;;
         s-y)    url="https://github.com/herozmy/StoreHouse/releases/download/sing-box-yelnoo/sing-box-yelnoo-linux-${arch}.tar.gz" ;;
         xiling) url="https://github.com/herozmy/StoreHouse/releases/download/sing-box-x/sing-box-x.tar.gz" ;;
-        reF1nd) url="https://github.com/herozmy/StoreHouse/releases/download/sing-box-reF1nd/sing-box-reF1nd-dev-linux-${arch}.tar.gz" ;;
+        reF1nd) url="https://github.com/zhuoyuan32/StoreHouse/releases/download/sing-box-reF1nd/sing-box-reF1nd-dev-linux-${arch}.tar.gz" ;;
         *) log_error "未知的核心类型 '$core_type'，无法进行安装。"; exit 1 ;;
     esac
     
