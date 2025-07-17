@@ -1,16 +1,16 @@
 {
     "log": {
         "disabled": false,
-        "level": "panic",
+        "level": "info",
         "timestamp": true
     },
     "experimental": {
         "clash_api": {
-            "external_controller": "0.0.0.0:9090",
+            "external_controller": "0.0.0.0:9095",
             "external_ui": "/etc/sing-box/ui",
             "external_ui_download_url": "https://github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip",
             "external_ui_download_detour": "🚀 节点选择",
-            "secret": "",
+            "secret": "910310",
             "default_mode": "rule"
         },
         "cache_file": {
@@ -107,6 +107,7 @@
             "outbounds": [
                 "🔄 自动选择",
                 "♻️ 手动选择",
+                "🏠 家宽节点",
                 "🇯🇵 日本节点-urltest",
                 "✨台湾节点-urltest",
                 "🇸🇬 狮城节点-urltest",
@@ -120,12 +121,13 @@
             ]
         },
         {
-            "tag": "自定义规则",
+            "tag": "🦐 Shopee",
             "type": "selector",
             "outbounds": [
                 "direct",
                 "🚀 节点选择",
                 "♻️ 手动选择",
+                "🏠 家宽节点",
                 "🇯🇵 日本节点-urltest",
                 "✨台湾节点-urltest",
                 "🇸🇬 狮城节点-urltest",
@@ -137,7 +139,28 @@
                 "🇭🇰 香港节点",
                 "🇺🇲 美国节点"
             ],
-            "default": "🚀 节点选择"
+            "default": "🇭🇰 香港节点"
+        },
+        {
+            "tag": "💰 Paypal",
+            "type": "selector",
+            "outbounds": [
+                "direct",
+                "🚀 节点选择",
+                "♻️ 手动选择",
+                "🏠 家宽节点",
+                "🇯🇵 日本节点-urltest",
+                "✨台湾节点-urltest",
+                "🇸🇬 狮城节点-urltest",
+                "🇭🇰 香港节点-urltest",
+                "🇺🇲 美国节点-urltest",
+                "✨台湾节点",
+                "🇯🇵 日本节点",
+                "🇸🇬 狮城节点",
+                "🇭🇰 香港节点",
+                "🇺🇲 美国节点"
+            ],
+            "default": "direct"
         },
         {
             "tag": "🐋 Docker",
@@ -175,7 +198,7 @@
                 "🇭🇰 香港节点",
                 "🇺🇲 美国节点"
             ],
-            "default": "🚀 节点选择"
+            "default": "✨台湾节点"
         },
         {
             "tag": "🎥 YouTube",
@@ -202,6 +225,7 @@
             "outbounds": [
                 "🚀 节点选择",
                 "♻️ 手动选择",
+                "🏠 家宽节点",
                 "🇯🇵 日本节点-urltest",
                 "✨台湾节点-urltest",
                 "🇸🇬 狮城节点-urltest",
@@ -213,7 +237,7 @@
                 "🇭🇰 香港节点",
                 "🇺🇲 美国节点"
             ],
-            "default": "🚀 节点选择"
+            "default": "🏠 家宽节点"
         },
         {
             "tag": "🤖 OpenAI",
@@ -221,6 +245,7 @@
             "outbounds": [
                 "🚀 节点选择",
                 "♻️ 手动选择",
+                "🏠 家宽节点",
                 "🇯🇵 日本节点-urltest",
                 "✨台湾节点-urltest",
                 "🇸🇬 狮城节点-urltest",
@@ -232,7 +257,7 @@
                 "🇭🇰 香港节点",
                 "🇺🇲 美国节点"
             ],
-            "default": "🇸🇬 狮城节点"
+            "default": "🇺🇲 美国节点"
         },
         {
             "type": "selector",
@@ -250,7 +275,8 @@
                 "🇸🇬 狮城节点",
                 "🇭🇰 香港节点",
                 "🇺🇲 美国节点"
-            ]
+            ],
+            "default": "🇭🇰 香港节点"
         },
         {
             "type": "selector",
@@ -290,7 +316,7 @@
                 "🇭🇰 香港节点",
                 "🇺🇲 美国节点"
             ],
-            "default": "direct"
+            "default": "✨台湾节点"
         },
         {
             "tag": "🎶 Spotify",
@@ -309,7 +335,7 @@
                 "🇭🇰 香港节点",
                 "🇺🇲 美国节点"
             ],
-            "default": "🇺🇲 美国节点"
+            "default": "🇭🇰 香港节点"
         },
         {
             "type": "selector",
@@ -362,6 +388,12 @@
         },
         {
             "type": "selector",
+            "tag": "🏠 家宽节点",
+            "use_all_providers": true,
+            "include": "(?i)家宽|家庭|原生|IEPL"
+        },
+        {
+            "type": "selector",
             "tag": "🇺🇲 美国节点",
             "use_all_providers": true,
             "include": "(?i)美|达拉斯|洛杉矶|圣何塞|US|United States"
@@ -400,7 +432,9 @@
             "type": "selector",
             "tag": "🐟 漏网之鱼",
             "outbounds": [
-                "🚀 节点选择"
+                "🚀 节点选择",
+                "✨台湾节点",
+                "direct"
             ]
         }
     ],
@@ -408,7 +442,7 @@
         "default_domain_resolver": {
             "server": "localDns"
         },
-        "final": "🚀 节点选择",
+        "final": "🐟 漏网之鱼",
         "auto_detect_interface": true,
         "default_mark": 1,
         "rules": [
@@ -445,10 +479,12 @@
                 "method": "drop"
             },
             {
-                "domain_suffix": [
-                    "tanhuatv.site"
-                ],
-                "outbound": "自定义规则"
+                "domain_suffix": "geosite-shopee",
+                "outbound": "🦐 Shopee"
+            },
+            {
+                "domain_suffix": "geosite-paypal",
+                "outbound": "💰 Paypal"
             },
             {
                 "rule_set": "docker",
@@ -489,6 +525,10 @@
             {
                 "rule_set": "geosite-microsoft",
                 "outbound": "🧩 Microsoft"
+            },
+            {
+                "rule_set": "geosite-pt",
+                "outbound": "direct"
             },
             {
                 "rule_set": "geosite-geolocation-!cn",
@@ -596,6 +636,30 @@
                 "type": "remote",
                 "format": "binary",
                 "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/microsoft.srs",
+                "download_detour": "direct",
+                "update_interval": "7d"
+            },
+            {
+                "tag": "geosite-shopee",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/shopee.srs",
+                "download_detour": "direct",
+                "update_interval": "7d"
+            },
+            {
+                "tag": "geosite-paypal",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/paypal.srs",
+                "download_detour": "direct",
+                "update_interval": "7d"
+            },
+            {
+                "tag": "geosite-pt",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-pt.srs",
                 "download_detour": "direct",
                 "update_interval": "7d"
             },
