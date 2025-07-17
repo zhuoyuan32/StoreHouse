@@ -20,7 +20,7 @@ fi
 DIRPATH="/usr/local/bin/tools"
 YQ_BIN_PATH="/usr/local/bin/yq"
 readonly SUB_HOST="https://sub-singbox.herozmy.com"
-readonly SINGBOX_CONFIG_TPL="&file=https://raw.githubusercontent.com/herozmy/StoreHouse/refs/heads/latest/config/sing-box/sing-box.json"
+readonly SINGBOX_CONFIG_TPL="&file=https://raw.githubusercontent.com/zhuoyuan32/StoreHouse/refs/heads/latest/config/sing-box/sing-box.json"
 readonly LOCAL_IP=$(hostname -I | awk '{print $1}')
 
 # --- 主调度器 (脚本入口) ---
@@ -221,7 +221,7 @@ task_install_mihomo() {
     
     # 下载并安装 Mihomo 核心文件
     # 确保 detect_architecture 函数可用
-    download_and_install_archive "mihomo" "https://github.com/herozmy/StoreHouse/releases/download/mihomo/mihomo-meta-linux-$(detect_architecture).tar.gz" "/usr/local/bin/mihomo"
+    download_and_install_archive "mihomo" "https://github.com/zhuoyuan32/StoreHouse/releases/download/mihomo/mihomo-meta-linux-$(detect_architecture).tar.gz" "/usr/local/bin/mihomo"
     
     # 串联所有安装步骤
     install_mihomo_config
@@ -303,7 +303,7 @@ task_interactive_install() {
   #  bash /usr/local/bin/tools/check_aio.sh
     enable_and_start_all_services "sing-box"
     
-    print_summary "Sing-Box" "/etc/sing-box" "http://${LOCAL_IP}:9090"
+    print_summary "Sing-Box" "/etc/sing-box" "http://${LOCAL_IP}:9095"
     print_service_commands "sing-box"
 
     # 提示用户关于代理切换的信息
@@ -843,7 +843,7 @@ install_mihomo_config() {
     
     # 定义常量，便于维护
     #local template_url="https://raw.githubusercontent.com/luestr/ProxyResource/main/Tool/Clash/Config/Clash_Sample_Configuration_By_iKeLee.yaml"
-    local template_url="https://raw.githubusercontent.com/herozmy/StoreHouse/refs/heads/latest/config/mihomo/config.yaml"
+    local template_url="https://raw.githubusercontent.com/zhuoyuan32/StoreHouse/refs/heads/latest/config/mihomo/config.yaml"
     local final_config_path="/etc/mihomo/config.yaml"
     
     # 创建一个临时文件来执行所有修改操作
@@ -1062,11 +1062,11 @@ generate_client_config() {
     local template_url=""
     case "$choice" in
         1) 
-            template_url="https://raw.githubusercontent.com/herozmy/StoreHouse/refs/heads/latest/config/sing-box/ph_hy2-home-20250418.json"
+            template_url="https://raw.githubusercontent.com/zhuoyuan32/StoreHouse/refs/heads/latest/config/sing-box/ph_hy2-home-20250418.json"
             log_info "正在生成 '全回家分流' 客户端配置..."
             ;;
         2) 
-            template_url="https://raw.githubusercontent.com/herozmy/StoreHouse/refs/heads/latest/config/sing-box/o_hy2-home.json"
+            template_url="https://raw.githubusercontent.com/zhuoyuan32/StoreHouse/refs/heads/latest/config/sing-box/o_hy2-home.json"
             log_info "正在生成 '客户端规则分流' 配置..."
             ;;
         *) 
