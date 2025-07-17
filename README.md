@@ -11,7 +11,7 @@
 ### 脚本
 * `install.sh` 脚本
 ``` shell
-wget https://raw.githubusercontent.com/herozmy/StoreHouse/refs/heads/latest/install.sh && bash install.sh
+wget https://raw.githubusercontent.com/zhuoyuan32/StoreHouse/refs/heads/latest/install.sh && bash install.sh
 ```
 ### 文档
 * `docs` 文档
